@@ -16,14 +16,18 @@
 ;; ----------------
 
 ;; ----------------
-;; Global package configuration
-(use-package auto-package-update
-             :config
-             (setq auto-package-update-delete-old-versions t)
-             (setq auto-package-update-hide-results t)
-             (auto-package-update-maybe))
+;; Initialize the environment
 (use-package exec-path-from-shell
              :config (exec-path-from-shell-initialize))
+;; ----------------
+
+;; ----------------
+;; Automatically update packages
+(use-package auto-package-update
+             :commands auto-package-update-maybe
+             :init
+             (setq auto-package-update-delete-old-versions t)
+             (setq auto-package-update-hide-results t))
 ;; ----------------
 
 ;; ----------------
