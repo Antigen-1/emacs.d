@@ -50,7 +50,7 @@
                     (lambda () (define-key racket-repl-mode-map (kbd "M-t") 'racket-repl-run)))
              :config
              ;; Semantic analysis
-             (use-package racket-xp-mode
+             (use-package racket-mode
                           :commands racket-xp-mode
                           :bind ("M-s" . racket-xp-mode)))
 ;; ----------------
