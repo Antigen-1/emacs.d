@@ -6,24 +6,24 @@
 ;; Packages
 ;; ---------------------------
 ;; ----------------
-;; Load `use-package`
+;; Load and configure `use-package`
 ;; This is only needed once, near the top of the file
 (eval-when-compile
-  ;; Following line is not needed if use-package.el is in ~/.emacs.d
   (add-to-list 'load-path (expand-file-name "use-package" user-emacs-directory))
-  (require 'use-package))
+  (require 'use-package)
+  (require 'use-package-ensure)
+  (setq use-package-always-ensure t))
 ;; ----------------
 
 ;; ----------------
 ;; Global package configuration
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
-
 (use-package auto-package-update
              :config
              (setq auto-package-update-delete-old-versions t)
              (setq auto-package-update-hide-results t)
              (auto-package-update-maybe))
+(use-package exec-path-from-shell
+             :config (exec-path-from-shell-initialize))
 ;; ----------------
 
 ;; ----------------
