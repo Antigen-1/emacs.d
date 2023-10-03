@@ -34,7 +34,8 @@
              :interpreter "racket"
              :commands racket-mode
              ;; Use `C-r` as a common prefix
-             :bind ("C-r" . racket-mode)
+             ;; Major mode
+             :bind ("C-r r" . racket-mode)
              ;; Module environment
              :hook (racket-mode
                     .
