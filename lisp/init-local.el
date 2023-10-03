@@ -33,22 +33,22 @@
              :mode "\\.rkt\\"
              :interpreter "racket"
              :commands racket-mode
-             ;; Use `C-r` as a common prefix
+             ;; Use `M-r` as a common prefix
              ;; Major mode
-             :bind ("C-r r" . racket-mode)
+             :bind ("M-r r" . racket-mode)
              ;; Module environment
              :hook (racket-mode
                     .
-                    (lambda () (define-key racket-mode-map (kbd "C-r m") 'racket-run)))
+                    (lambda () (define-key racket-mode-map (kbd "M-r m") 'racket-run)))
              ;; Top-level environment
              :hook (racket-repl-mode
                     .
-                    (lambda () (define-key racket-repl-mode-map (kbd "C-r t") 'racket-repl-run)))
+                    (lambda () (define-key racket-repl-mode-map (kbd "M-r t") 'racket-repl-run)))
              :config
              ;; Semantic analysis
              (use-package racket-xp-mode
                           :commands racket-xp-mode
-                          :bind ("C-r x" . racket-xp-mode)))
+                          :bind ("M-r x" . racket-xp-mode)))
 ;; ----------------
 ;; ---------------------------
 
