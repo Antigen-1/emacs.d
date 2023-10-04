@@ -33,8 +33,8 @@
 ;; ----------------
 ;; Racket
 (use-package racket-mode
-             :magic "#lang"
-             :mode "\\.rkt\\"
+             :magic "#lang racket"
+             :mode "\\.rkt\\'"
              :interpreter "racket"
              :commands racket-mode
              ;; Use `M-` as a common prefix
@@ -53,6 +53,21 @@
              (use-package racket-mode
                           :commands racket-xp-mode
                           :bind ("M-s" . racket-xp-mode)))
+;; ----------------
+
+;; ----------------
+;; Pollen
+(use-package pollen-mode
+             :magic "#lang pollen"
+             :mode "\\.p\\(m\\|md\\|p\\)?\\'"
+             :commands pollen-mode)
+;; ----------------
+
+;; ----------------
+;; Org
+(use-package org-mode
+             :mode "\\.org\\'"
+             :commands org-mode)
 ;; ----------------
 ;; ---------------------------
 
