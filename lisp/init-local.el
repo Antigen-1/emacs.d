@@ -24,7 +24,10 @@
 ;; ----------------
 ;; Automatically update packages
 (use-package auto-package-update
-  :commands (auto-package-update-now auto-package-update-now-async))
+  :commands (auto-package-update-now auto-package-update-now-async)
+  :init
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t))
 ;; ----------------
 
 ;; ----------------
