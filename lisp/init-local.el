@@ -24,35 +24,32 @@
 ;; ----------------
 ;; Automatically update packages
 (use-package auto-package-update
-             :commands auto-package-update-maybe
-             :init
-             (setq auto-package-update-delete-old-versions t)
-             (setq auto-package-update-hide-results t))
+  :commands (auto-package-update-now auto-package-update-now-async))
 ;; ----------------
 
 ;; ----------------
 ;; Racket
 (use-package racket-mode
-             :magic "#lang racket"
-             :mode "\\.rkt\\'"
-             :interpreter "racket"
-             :commands racket-mode
-             ;; Use `M-` as a common prefix
-             ;; Major mode
-             :bind ("M-r" . racket-mode)
-             ;; Module environment
-             :hook (racket-mode
-                    .
-                    (lambda () (define-key racket-mode-map (kbd "M-m") 'racket-run)))
-             ;; Top-level environment
-             :hook (racket-repl-mode
-                    .
-                    (lambda () (define-key racket-repl-mode-map (kbd "M-t") 'racket-repl-run)))
-             :config
-             ;; Semantic analysis
-             (use-package racket-mode
-                          :commands racket-xp-mode
-                          :bind ("M-s" . racket-xp-mode)))
+  :magic "#lang racket"
+  :mode "\\.rkt\\'"
+  :interpreter "racket"
+  :commands racket-mode
+  ;; Use `M-` as a common prefix
+  ;; Major mode
+  :bind ("M-r" . racket-mode)
+  ;; Module environment
+  :hook (racket-mode
+         .
+         (lambda () (define-key racket-mode-map (kbd "M-m") 'racket-run)))
+  ;; Top-level environment
+  :hook (racket-repl-mode
+         .
+         (lambda () (define-key racket-repl-mode-map (kbd "M-t") 'racket-repl-run)))
+  :config
+  ;; Semantic analysis
+  (use-package racket-mode
+    :commands racket-xp-mode
+    :bind ("M-s" . racket-xp-mode)))
 ;; ----------------
 
 ;; ----------------
