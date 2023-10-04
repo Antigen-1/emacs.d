@@ -65,9 +65,9 @@
 
 ;; ----------------
 ;; Org
-(use-package org-mode
-             :mode "\\.org\\'"
-             :commands org-mode)
+(use-package org
+  :mode "\\.org\\'"
+  :commands org-mode)
 ;; ----------------
 ;; ---------------------------
 
