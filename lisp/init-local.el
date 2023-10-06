@@ -31,6 +31,13 @@
 ;; ----------------
 
 ;; ----------------
+;; Fira code
+(use-package fira-code-mode
+  :custom (fira-code-mode-disabled-ligatures '("[]" "x"))
+  :hook prog-mode)
+;; ----------------
+
+;; ----------------
 ;; Racket
 (use-package racket-mode
   :magic "#lang racket"
