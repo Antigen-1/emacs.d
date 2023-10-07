@@ -43,10 +43,10 @@
   :magic "#lang racket"
   :mode "\\.rkt\\'"
   :interpreter "racket"
-  :commands racket-mode
+  :commands (racket-mode racket-xp-mode)
   ;; Use `M-` as a common prefix
-  ;; Major mode
-  :bind ("M-r" . racket-mode)
+  ;; Major mode and minor mode
+  :bind (("M-r" . racket-mode) ("M-s" . racket-xp-mode))
   ;; Module environment
   :hook (racket-mode
          .
@@ -55,11 +55,7 @@
   :hook (racket-repl-mode
          .
          (lambda () (define-key racket-repl-mode-map (kbd "M-t") 'racket-repl-run)))
-  :config
-  ;; Semantic analysis
-  (use-package racket-mode
-    :commands racket-xp-mode
-    :bind ("M-s" . racket-xp-mode)))
+  )
 ;; ----------------
 
 ;; ----------------
