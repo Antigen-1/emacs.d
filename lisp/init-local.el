@@ -43,7 +43,6 @@
   :magic "#lang racket"
   :mode "\\.rkt\\'"
   :interpreter "racket"
-  :commands (racket-mode racket-xp-mode)
   ;; Use `M-` as a common prefix
   ;; Major mode and minor mode
   :bind (("M-r" . racket-mode) ("M-s" . racket-xp-mode))
