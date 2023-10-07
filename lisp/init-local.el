@@ -45,7 +45,7 @@
   :interpreter "racket"
   ;; Use `M-` as a common prefix
   ;; Major mode and minor mode
-  :bind (("M-r" . racket-mode) ("M-s" . racket-xp-mode))
+  :bind (("M-y" . racket-mode) ("M-e" . racket-xp-mode))
   ;; Module environment
   :hook (racket-mode
          .
