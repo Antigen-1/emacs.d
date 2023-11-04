@@ -82,6 +82,7 @@
 ;; Haskell
 (use-package lsp-mode
   :hook ((haskell-mode-hook haskell-literate-mode-hook) . lsp))
+(use-package lsp-haskell :defer t)
 ;; ----------------
 ;; ---------------------------
 
