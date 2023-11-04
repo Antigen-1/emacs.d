@@ -71,6 +71,12 @@
   :mode "\\.org\\'"
   :commands org-mode)
 ;; ----------------
+
+;; ----------------
+;; Haskell
+(use-package lsp-mode
+  :hook ((haskell-mode-hook haskell-literate-mode-hook) . lsp))
+;; ----------------
 ;; ---------------------------
 
 ;; Others
