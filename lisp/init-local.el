@@ -75,7 +75,7 @@
 ;; ----------------
 ;;Completion
 (use-package company
-  :hook ((prog-mode text-mode) . company-mode))
+  :hook (text-mode . company-mode))
 ;; ----------------
 
 ;; ----------------
