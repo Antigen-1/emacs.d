@@ -60,9 +60,17 @@
 ;; ----------------
 ;; Pollen
 (use-package pollen-mode
-             :magic "#lang pollen"
-             :mode "\\.p\\(m\\|md\\|p\\)?\\'"
-             :commands pollen-mode)
+  :magic "#lang pollen"
+  :mode "\\.p\\(m\\|md\\|p\\)?\\'"
+  :commands pollen-mode)
+;; ----------------
+
+;; ----------------
+;; Scribble
+(use-package scribble-mode
+  :magic "#lang scribble"
+  :mode "\\.scrbl\\'"
+  :commands scribble-mode)
 ;; ----------------
 
 ;; ----------------
