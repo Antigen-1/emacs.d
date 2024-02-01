@@ -18,16 +18,16 @@
 ;; ----------------
 ;; Initialize the environment
 (use-package exec-path-from-shell
-             :config (exec-path-from-shell-initialize))
+  :config (exec-path-from-shell-initialize))
 ;; ----------------
 
 ;; ----------------
 ;; Automatically update packages
 (use-package auto-package-update
-  :commands (auto-package-update-now auto-package-update-now-async)
-  :init
+  :config
   (setq auto-package-update-delete-old-versions t)
-  (setq auto-package-update-hide-results t))
+  (setq auto-package-update-hide-results t)
+  (auto-package-update-maybe))
 ;; ----------------
 
 ;; ----------------
